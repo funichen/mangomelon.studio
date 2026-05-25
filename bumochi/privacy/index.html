@@ -7,19 +7,17 @@
   <meta name="description" content="Privacy policy for Bumochi, a MangoMelon Studio app for kids and families." />
   <link rel="icon" type="image/png" href="../../bumochi-icon-small.png" />
   <link rel="apple-touch-icon" href="../../bumochi-icon.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../mm.css" />
   <style>
     :root {
       color-scheme: light;
-      --coral: #ff8a7a;
-      --cream: #fff4e2;
-      --peach: #ffe0dc;
-      --ink-primary: #3d2e26;
-      --ink-secondary: #7a6b5f;
-      --paper: #fffaf3;
-      --line: rgba(61, 46, 38, 0.12);
+      --coral: #D9874A;          /* mango-600 (Bumochi accent) */
+      --cream: #FBF8F3;          /* cream-50 */
+      --peach: #FFD9A8;          /* mango-300 */
+      --ink-primary: #3A3733;
+      --ink-secondary: #5D5A56;
+      --paper: #FFFFFF;
+      --line: rgba(155, 139, 122, 0.18);
     }
     * { box-sizing: border-box; }
     body {
@@ -121,12 +119,19 @@
 </head>
 <body>
   <header class="shell nav">
-    <a class="brand" href="../">
-      <img src="../../bumochi-icon-small.png" alt="" />
-      Bumochi
-    </a>
+    <div style="display:flex; align-items:center; gap:14px;">
+      <a href="../../index.html" style="display:inline-flex; align-items:center; gap:8px; text-decoration:none; color: var(--mm-taupe-600); font-size:14px; font-weight:600;">
+        <img src="../../mangomelon-logo.png" alt="MangoMelon Studio" style="width:28px; height:28px; object-fit:contain;" />
+        <span>MangoMelon Studio</span>
+        <span style="color: var(--mm-sand-400);">/</span>
+      </a>
+      <a class="brand" href="../index.html">
+        <img src="../../bumochi-icon-small.png" alt="" />
+        Bumochi
+      </a>
+    </div>
     <nav class="nav-links" aria-label="Privacy navigation">
-      <a href="../">Product</a>
+      <a href="../index.html">Product</a>
       <a href="mailto:support@mangomelon.studio?subject=Bumochi%20privacy">Contact</a>
     </nav>
   </header>

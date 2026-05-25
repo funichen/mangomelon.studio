@@ -1,109 +1,84 @@
-# MangoMelon Studio Static Site
+# MangoMelon Studio 🍈🥭
 
-Static HTML site for **MangoMelon Studio** and **Bumochi**. Zero build, suitable
-for GitHub Pages.
+[**www.mangomelon.studio**](https://www.mangomelon.studio)
 
-## What's here
+MangoMelon Studio is a small independent studio building **gentle, playful
+software for families**. We care about apps that feel warm, useful, and
+trustworthy — not apps that push endless engagement.
 
+Across our products the goal is the same: calm design, clear utility,
+family-friendly privacy, and a little bit of joy.
+
+---
+
+## Our products
+
+### 🐰 Bumochi — gentle time management for kids 6+
+
+A bunny pet companion that helps kids build daily routines through quests,
+healthy breaks, and a weekly review parents can actually use. Local-first,
+no ads, no engagement traps. The name is a Chinese pun on *不磨叽* — "no dawdling."
+
+→ [mangomelon.studio/bumochi](https://www.mangomelon.studio/bumochi/)
+
+### 🦆 SquishyDuck — soft stress relief
+
+Squeeze, breathe, and unwind with a little duck companion. SquishyDuck started
+the studio's product journey — tactile, playful interactions designed to make
+quick calming moments feel lighter.
+
+→ [Download on the App Store](https://apps.apple.com/us/app/squishy-duck/id6751784205)
+→ [mangomelon.studio/squishyduck](https://www.mangomelon.studio/squishyduck/)
+
+---
+
+## What we believe
+
+- **Privacy by default.** No third-party ad SDKs, no behavioral tracking, no
+  data brokers. Where possible, data stays on the device.
+- **Calm, not addictive.** No streaks-as-pressure, no casino-style reward
+  loops, no notifications nagging you to come back.
+- **Family-friendly.** Designed so parents can hand a phone to a kid without
+  worrying about what's on the other side of a tap.
+- **Small and patient.** We'd rather ship something gentle and slow than
+  something loud and extractive.
+
+---
+
+## Get in touch
+
+- General & press: [support@mangomelon.studio](mailto:support@mangomelon.studio)
+- Bumochi support: [support@mangomelon.studio](mailto:support@mangomelon.studio?subject=Bumochi)
+- SquishyDuck support: [support@mangomelon.app](mailto:support@mangomelon.app?subject=SquishyDuck)
+
+---
+
+## About this repository
+
+This repo holds the static site for **www.mangomelon.studio**, served via
+GitHub Pages. No build step — just plain HTML, Tailwind via CDN, and a small
+shared design-token stylesheet ([`mm.css`](./mm.css)) derived from the
+MangoMelon Studio design system (warm Morandi palette + Fraunces / Nunito /
+Caveat Brush).
+
+```text
+index.html                       # Studio homepage
+contact/index.html               # Contact page
+bumochi/index.html               # Bumochi product page
+bumochi/privacy/index.html       # Bumochi privacy policy
+squishyduck/index.html           # SquishyDuck product page
+squishyduck/privacy/index.html   # SquishyDuck privacy policy
+mm.css                           # Shared design tokens
+CNAME                            # GitHub Pages custom domain
 ```
-index.html                    # MangoMelon company homepage
-bumochi/index.html            # Bumochi landing page
-bumochi/privacy/index.html    # Bumochi privacy policy for /bumochi/privacy/
-CNAME                         # GitHub Pages custom domain: www.mangomelon.studio
-.nojekyll                     # Disable GitHub Pages Jekyll processing
-SQUARESPACE-COPY.md           # Copy blocks for updating the current Squarespace site
-```
 
-## Preview locally
+To preview locally:
 
 ```bash
-# from this folder
 python3 -m http.server 4173
 # open http://localhost:4173
 ```
 
-The local URLs should be:
+---
 
-```text
-http://localhost:4173/
-http://localhost:4173/bumochi/
-http://localhost:4173/bumochi/privacy/
-```
-
-## Deploy to GitHub Pages
-
-Recommended: publish this folder as its own GitHub repo, for example
-`funichen/mangomelon.studio`.
-
-```bash
-# one-time setup from this folder
-git init
-git add .
-git commit -m "Initial MangoMelon Studio site"
-git branch -M main
-git remote add origin https://github.com/funichen/mangomelon.studio.git
-git push -u origin main
-```
-
-Then in GitHub:
-
-1. Open the repo.
-2. Go to `Settings > Pages`.
-3. Set source to `Deploy from a branch`.
-4. Choose `main` and `/root`.
-5. Confirm the custom domain is `www.mangomelon.studio`.
-6. Enable `Enforce HTTPS` after GitHub finishes issuing the certificate.
-
-If you keep this folder inside the existing monorepo instead, use a GitHub
-Actions workflow or subtree deployment so GitHub Pages publishes this folder
-as the site root.
-
-## Squarespace DNS
-
-Keep the domain subscription in Squarespace, but point the DNS records to
-GitHub Pages.
-
-Remove Squarespace default website records first, then add:
-
-```text
-@     A      185.199.108.153
-@     A      185.199.109.153
-@     A      185.199.110.153
-@     A      185.199.111.153
-www   CNAME  funichen.github.io
-```
-
-Optional IPv6:
-
-```text
-@     AAAA   2606:50c0:8000::153
-@     AAAA   2606:50c0:8001::153
-@     AAAA   2606:50c0:8002::153
-@     AAAA   2606:50c0:8003::153
-```
-
-Do not delete email records such as `MX`, `TXT`, SPF, DKIM, or DMARC.
-
-## Before going live
-
-- [ ] Add real App Store / Play Store links when live; current CTAs use `mailto:support@mangomelon.studio`
-- [ ] Add the real `og-image.png` (1200×630) at `/bumochi/og-image.png` — see `1-Projects/Kids-Time-Manager/ICON-PROMPT-2026-05-23.md` for the prompt
-- [x] Create `/bumochi/privacy/` page
-- [x] Add GitHub Pages `CNAME`
-- [ ] Create GitHub repo and enable Pages
-- [ ] Point Squarespace DNS to GitHub Pages
-- [ ] Swap Tailwind CDN for a built CSS file (run `npx tailwindcss -i input.css -o output.css --minify`) before production — CDN is dev-only per Tailwind docs
-- [ ] Replace `🐰` emoji phone mockup with a real Flutter app screenshot
-- [ ] Set up Plausible or Buttondown if you want privacy-friendly analytics / newsletter
-
-## Design tokens
-
-Copied from the Flutter app's `FocusPetTheme` so the web feels like the same product:
-
-- `coral` = `#FF8A7A`
-- `peach` = `#FFE0DC`
-- `cream` = `#FFF4E2`
-- `ink-primary` = `#3D2E26`
-- `ink-secondary` = `#7A6B5F`
-- Display font: Fraunces (serif)
-- Body font: Nunito (sans)
+© MangoMelon Studio LLC. Gentle family software, built with care.

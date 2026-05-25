@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SquishyDuck — soft stress relief | MangoMelon Studio</title>
+  <meta name="description" content="SquishyDuck is a soft stress-relief app from MangoMelon Studio. Squeeze, breathe, and unwind with a little duck companion." />
+  <link rel="icon" type="image/png" href="../squishyduck-icon.png" />
+  <link rel="apple-touch-icon" href="../squishyduck-icon.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="SquishyDuck — soft stress relief" />
+  <meta property="og:description" content="Squeeze, breathe, and unwind with a little duck companion. From MangoMelon Studio." />
+  <meta property="og:url" content="https://www.mangomelon.studio/squishyduck/" />
+  <meta property="og:image" content="https://www.mangomelon.studio/squishyduck-icon.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            blossom: '#C77E8A',
+            'blossom-soft': '#F8D7DC',
+            cream: '#FBF8F3',
+            'ink-primary': '#3A3733',
+            'ink-secondary': '#5D5A56',
+          },
+          fontFamily: {
+            display: ['Fraunces', 'Georgia', 'serif'],
+            body: ['Nunito', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+  <link rel="stylesheet" href="../mm.css" />
+  <style>
+    .float {
+      animation: float 5s ease-in-out infinite;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+  </style>
+</head>
+<body class="min-h-screen">
+
+  <nav class="max-w-6xl mx-auto px-6 py-6 flex flex-wrap items-center justify-between gap-4">
+    <div class="flex items-center gap-4">
+      <a href="../index.html" class="flex items-center gap-2 text-sm font-semibold" style="color: var(--mm-taupe-600);">
+        <img src="../mangomelon-logo.png" alt="MangoMelon Studio" class="w-7 h-7 object-contain" />
+        <span class="hidden sm:inline">MangoMelon Studio</span>
+        <span style="color: var(--mm-sand-400);">/</span>
+      </a>
+      <a href="index.html" class="flex items-center gap-2 text-ink-primary font-display font-semibold text-xl">
+        <img src="../squishyduck-icon.png" alt="SquishyDuck" class="w-8 h-8 rounded-lg" />
+        SquishyDuck
+      </a>
+    </div>
+    <div class="flex flex-wrap items-center justify-end gap-x-6 gap-y-2 text-sm font-semibold" style="color: var(--mm-ink-800);">
+      <a href="#features" class="mm-link">Features</a>
+      <a href="#about" class="mm-link">About</a>
+      <a href="privacy/index.html" class="mm-link">Privacy</a>
+      <a href="mailto:support@mangomelon.app?subject=SquishyDuck" class="mm-link">Contact</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="max-w-6xl mx-auto px-6 py-12 md:py-20 grid md:grid-cols-2 gap-12 items-center">
+    <div>
+      <p class="mm-caption mb-4" style="color: var(--mm-blossom-600);">A MangoMelon Studio app</p>
+      <h1 class="text-5xl md:text-6xl font-semibold leading-tight mb-6" style="color: var(--mm-ink-900);">
+        Soft stress relief,<br/>
+        <span style="color: var(--mm-blossom-600);">one duck at a time.</span>
+      </h1>
+      <p class="text-lg leading-relaxed mb-8 max-w-md" style="color: var(--mm-ink-800);">
+        Squeeze, breathe, and unwind with a little duck companion.
+        Tactile, playful, and quiet — designed for quick calming moments.
+      </p>
+      <div class="flex flex-wrap gap-3 mb-4">
+        <a href="https://apps.apple.com/us/app/squishy-duck/id6751784205" target="_blank" rel="noopener" class="mm-btn-primary" style="background: var(--mm-blossom-600);">
+          Download on the App Store
+        </a>
+        <a href="privacy/index.html" class="mm-btn-ghost">Privacy policy</a>
+      </div>
+      <p class="text-xs font-semibold" style="color: var(--mm-ink-800);">Available on the App Store. Designed for iPhone &amp; iPad.</p>
+    </div>
+    <div class="flex justify-center">
+      <div class="float">
+        <img src="../squishyduck-icon.png" alt="SquishyDuck app icon" class="w-64 md:w-80 rounded-[28%] shadow-2xl" />
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section id="features" class="py-20" style="background: rgba(255,255,255,0.55); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <p class="mm-caption mb-3" style="color: var(--mm-blossom-600);">What's inside</p>
+        <h2 class="text-4xl md:text-5xl font-semibold">A little ritual, in your pocket.</h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="mm-card p-8">
+          <div class="text-5xl mb-4">🫧</div>
+          <h3 class="text-2xl font-semibold mb-2">Squeeze</h3>
+          <p class="leading-relaxed" style="color: var(--mm-ink-800);">
+            Tap and hold to squish your duck. Soft haptics, soft sounds, no pressure.
+          </p>
+        </div>
+        <div class="mm-card p-8">
+          <div class="text-5xl mb-4">🌬️</div>
+          <h3 class="text-2xl font-semibold mb-2">Breathe</h3>
+          <p class="leading-relaxed" style="color: var(--mm-ink-800);">
+            Follow a gentle box-breathing animation. Inhale, hold, exhale, rest.
+          </p>
+        </div>
+        <div class="mm-card p-8">
+          <div class="text-5xl mb-4">🎵</div>
+          <h3 class="text-2xl font-semibold mb-2">Unwind</h3>
+          <p class="leading-relaxed" style="color: var(--mm-ink-800);">
+            Calming background sounds and tiny interactions designed to slow you down.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST -->
+  <section class="max-w-4xl mx-auto px-6 py-20 text-center">
+    <p class="mm-caption mb-4" style="color: var(--mm-blossom-600);">Made with care</p>
+    <h2 class="text-4xl md:text-5xl font-semibold mb-6">Gentle by design.</h2>
+    <div class="grid md:grid-cols-2 gap-6 mt-10 text-left">
+      <div class="mm-card p-6">
+        <h3 class="text-xl font-semibold mb-2">🛡️ No tracking, no ads</h3>
+        <p style="color: var(--mm-ink-800);">SquishyDuck doesn't collect personal data, track activity, or use third-party analytics or ad SDKs.</p>
+      </div>
+      <div class="mm-card p-6">
+        <h3 class="text-xl font-semibold mb-2">👶 Safe for all ages</h3>
+        <p style="color: var(--mm-ink-800);">Designed for a general audience. No accounts, no chat, no surprises.</p>
+      </div>
+      <div class="mm-card p-6">
+        <h3 class="text-xl font-semibold mb-2">💛 Optional donations</h3>
+        <p style="color: var(--mm-ink-800);">If you want to support the studio, in-app donations are handled by Apple. Always optional.</p>
+      </div>
+      <div class="mm-card p-6">
+        <h3 class="text-xl font-semibold mb-2">🌸 Quiet, not loud</h3>
+        <p style="color: var(--mm-ink-800);">No streaks, no badges, no notifications nagging you. Open it when you need it.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="py-20" style="background: rgba(248, 215, 220, 0.25);">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <p class="mm-caption mb-4" style="color: var(--mm-blossom-600);">About</p>
+      <h2 class="text-4xl md:text-5xl font-semibold mb-6">The first MangoMelon app.</h2>
+      <p class="text-lg leading-relaxed mb-4" style="color: var(--mm-ink-800);">
+        SquishyDuck started the studio's product journey — a tiny idea to help with stress
+        that turned into a joyful little experiment in design, play, and creativity.
+      </p>
+      <p class="text-lg leading-relaxed" style="color: var(--mm-ink-800);">
+        Many of the visuals are co-created with a small human whose imagination keeps things lighter.
+      </p>
+    </div>
+  </section>
+
+  <footer style="border-top: 1px solid var(--border);" class="mt-10">
+    <div class="max-w-6xl mx-auto px-6 py-10 flex flex-wrap justify-between items-center gap-4 text-sm" style="color: var(--mm-ink-800);">
+      <a href="../index.html" class="flex items-center gap-3 hover:opacity-80 transition-opacity">
+        <img src="../mangomelon-logo.png" alt="" class="w-9 h-9 object-contain" />
+        <div>
+          <p class="font-bold" style="color: var(--mm-ink-900);">SquishyDuck · MangoMelon Studio</p>
+          <p>Gentle family software by MangoMelon Studio LLC</p>
+        </div>
+      </a>
+      <div class="flex flex-wrap gap-5 font-semibold">
+        <a href="privacy/index.html" class="mm-link">Privacy</a>
+        <a href="mailto:support@mangomelon.app?subject=SquishyDuck%20support" class="mm-link">Support</a>
+        <a href="mailto:support@mangomelon.app?subject=SquishyDuck%20contact" class="mm-link">Contact</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

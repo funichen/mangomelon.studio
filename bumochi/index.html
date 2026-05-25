@@ -25,12 +25,12 @@
       theme: {
         extend: {
           colors: {
-            coral: '#FF8A7A',
-            'coral-pressed': '#E5705F',
-            peach: '#FFE0DC',
-            cream: '#FFF4E2',
-            'ink-primary': '#3D2E26',
-            'ink-secondary': '#7A6B5F',
+            coral: '#D9874A',          /* → mm-mango-600 (Bumochi accent) */
+            'coral-pressed': '#B86E36',
+            peach: '#FFD9A8',          /* → mm-mango-300 */
+            cream: '#FBF8F3',          /* → mm-cream-50 */
+            'ink-primary': '#3A3733',  /* → mm-ink-900 */
+            'ink-secondary': '#5D5A56',/* → mm-ink-800 */
           },
           fontFamily: {
             display: ['Fraunces', 'Georgia', 'serif'],
@@ -41,19 +41,9 @@
     }
   </script>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../mm.css" />
 
   <style>
-    body {
-      font-family: 'Nunito', system-ui, sans-serif;
-      background: linear-gradient(180deg, #FFF4E2 0%, #FFE0DC 100%);
-      color: #3D2E26;
-    }
-    h1, h2, h3 {
-      font-family: 'Fraunces', Georgia, serif;
-    }
     .wobble {
       animation: wobble 6s ease-in-out infinite;
     }
@@ -75,15 +65,22 @@
        NAV
   ───────────────────────────────────────────────────────────── -->
   <nav class="max-w-6xl mx-auto px-6 py-6 flex flex-wrap items-center justify-between gap-4">
-    <a href="./" class="flex items-center gap-2 text-ink-primary font-display font-semibold text-xl">
-      <img src="../bumochi-icon-small.png" alt="Bumochi" class="w-8 h-8 rounded-lg" />
-      Bumochi
-    </a>
+    <div class="flex items-center gap-4">
+      <a href="../index.html" class="flex items-center gap-2 text-sm font-semibold" style="color: var(--mm-taupe-600);">
+        <img src="../mangomelon-logo.png" alt="MangoMelon Studio" class="w-7 h-7 object-contain" />
+        <span class="hidden sm:inline">MangoMelon Studio</span>
+        <span style="color: var(--mm-sand-400);">/</span>
+      </a>
+      <a href="index.html" class="flex items-center gap-2 text-ink-primary font-display font-semibold text-xl">
+        <img src="../bumochi-icon-small.png" alt="Bumochi" class="w-8 h-8 rounded-lg" />
+        Bumochi
+      </a>
+    </div>
     <div class="flex flex-wrap items-center justify-end gap-x-6 gap-y-2 text-sm font-bold text-ink-secondary">
       <a href="#features" class="hover:text-coral transition-colors">Features</a>
       <a href="#trust" class="hover:text-coral transition-colors">Trust</a>
       <a href="#about" class="hover:text-coral transition-colors">About</a>
-      <a href="privacy/" class="hover:text-coral transition-colors">Privacy Policy</a>
+      <a href="privacy/index.html" class="hover:text-coral transition-colors">Privacy Policy</a>
       <a href="mailto:support@mangomelon.studio?subject=Bumochi%20support" class="hover:text-coral transition-colors">Contact</a>
     </div>
   </nav>
@@ -106,7 +103,7 @@
         <a href="mailto:support@mangomelon.studio?subject=Bumochi%20launch%20list" class="badge-store inline-flex items-center gap-2 bg-ink-primary text-white px-5 py-3 rounded-xl font-bold">
           Join launch list
         </a>
-        <a href="privacy/" class="badge-store inline-flex items-center gap-2 bg-white text-ink-primary px-5 py-3 rounded-xl font-bold border border-ink-primary/10">
+        <a href="privacy/index.html" class="badge-store inline-flex items-center gap-2 bg-white text-ink-primary px-5 py-3 rounded-xl font-bold border border-ink-primary/10">
           Read privacy policy
         </a>
       </div>
@@ -317,12 +314,15 @@
   ───────────────────────────────────────────────────────────── -->
   <footer class="border-t border-ink-primary/10 mt-10">
     <div class="max-w-6xl mx-auto px-6 py-10 flex flex-wrap justify-between items-center gap-4 text-sm text-ink-secondary">
-      <div>
-        <p class="font-bold text-ink-primary mb-1">Bumochi · MangoMelon Studio · 2026</p>
-        <p>Gentle family software by MangoMelon Studio LLC</p>
-      </div>
+      <a href="../index.html" class="flex items-center gap-3 hover:opacity-80 transition-opacity">
+        <img src="../mangomelon-logo.png" alt="" class="w-9 h-9 object-contain" />
+        <div>
+          <p class="font-bold text-ink-primary mb-1">Bumochi · MangoMelon Studio · 2026</p>
+          <p>Gentle family software by MangoMelon Studio LLC</p>
+        </div>
+      </a>
       <div class="flex flex-wrap gap-5 font-bold">
-        <a href="privacy/" class="hover:text-coral transition-colors">Privacy</a>
+        <a href="privacy/index.html" class="hover:text-coral transition-colors">Privacy</a>
         <a href="mailto:support@mangomelon.studio?subject=Bumochi%20support" class="hover:text-coral transition-colors">Support</a>
         <a href="mailto:support@mangomelon.studio?subject=Bumochi%20press" class="hover:text-coral transition-colors">Press</a>
         <a href="mailto:support@mangomelon.studio?subject=Bumochi%20contact" class="hover:text-coral transition-colors">Contact</a>

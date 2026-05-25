@@ -3,177 +3,138 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MangoMelon Studio - Bumochi and gentle family apps</title>
-  <meta name="description" content="MangoMelon Studio builds gentle, playful software for families, including Bumochi, a kids time-management pet companion, and SquishyDuck, a soft stress-relief app." />
-  <link rel="icon" type="image/png" href="bumochi-icon-small.png" />
-  <link rel="apple-touch-icon" href="bumochi-icon.png" />
+  <title>MangoMelon Studio — gentle, playful software for families</title>
+  <meta name="description" content="MangoMelon Studio is an independent studio building gentle, playful software for families. Home of Bumochi (kids time-management pet companion) and SquishyDuck (soft stress-relief)." />
+  <link rel="icon" type="image/png" href="mangomelon-logo.png" />
+  <link rel="apple-touch-icon" href="mangomelon-logo.png" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="MangoMelon Studio" />
   <meta property="og:description" content="Gentle, playful software for families. Home of Bumochi and SquishyDuck." />
   <meta property="og:url" content="https://www.mangomelon.studio/" />
-  <meta name="twitter:card" content="summary" />
+  <meta property="og:image" content="https://www.mangomelon.studio/mangomelon-logo.png" />
+  <meta name="twitter:card" content="summary_large_image" />
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            coral: '#FF8A7A',
-            peach: '#FFE0DC',
-            cream: '#FFF4E2',
-            melon: '#B7D9C0',
-            sky: '#B9CADC',
-            'ink-primary': '#3D2E26',
-            'ink-secondary': '#7A6B5F',
-          },
-          fontFamily: {
-            display: ['Fraunces', 'Georgia', 'serif'],
-            body: ['Nunito', 'system-ui', 'sans-serif'],
-          },
-        },
-      },
-    }
-  </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Nunito', system-ui, sans-serif;
-      background:
-        radial-gradient(circle at 12% 8%, rgba(183, 217, 192, 0.5), transparent 28%),
-        radial-gradient(circle at 88% 12%, rgba(185, 202, 220, 0.42), transparent 30%),
-        linear-gradient(180deg, #FFF4E2 0%, #FFE0DC 100%);
-      color: #3D2E26;
-    }
-    h1, h2, h3 {
-      font-family: 'Fraunces', Georgia, serif;
-    }
-    .soft-hover {
-      transition: transform 200ms ease, box-shadow 200ms ease;
-    }
-    .soft-hover:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 18px 40px rgba(61, 46, 38, 0.12);
-    }
-  </style>
+  <link rel="stylesheet" href="mm.css" />
 </head>
 <body class="min-h-screen">
-  <nav class="max-w-6xl mx-auto px-6 py-6 flex flex-wrap items-center justify-between gap-4">
-    <a href="./" class="flex items-center gap-2 text-ink-primary font-display font-semibold text-xl">
-      <img src="bumochi-icon-small.png" alt="" class="w-8 h-8 rounded-lg" />
-      MangoMelon Studio
-    </a>
-    <div class="flex flex-wrap items-center justify-end gap-x-6 gap-y-2 text-sm font-bold text-ink-secondary">
-      <a href="#products" class="hover:text-coral transition-colors">Products</a>
-      <a href="#about" class="hover:text-coral transition-colors">About</a>
-      <a href="bumochi/" class="hover:text-coral transition-colors">Bumochi</a>
-      <a href="bumochi/privacy/" class="hover:text-coral transition-colors">Privacy</a>
-      <a href="mailto:support@mangomelon.studio" class="hover:text-coral transition-colors">Contact</a>
+  <nav class="mm-nav sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex flex-wrap items-center justify-between gap-4">
+      <a href="./" class="flex items-center gap-3">
+        <img src="mangomelon-logo.png" alt="MangoMelon Studio" class="w-10 h-10 object-contain" />
+        <span class="mm-mascot text-2xl" style="color: var(--mm-taupe-700);">MangoMelon Studio</span>
+      </a>
+      <div class="flex flex-wrap items-center justify-end gap-x-6 gap-y-2 text-sm font-semibold" style="color: var(--mm-ink-800);">
+        <a href="#about" class="mm-link">About</a>
+        <a href="#products" class="mm-link">Products</a>
+        <a href="contact/index.html" class="mm-link">Contact</a>
+      </div>
     </div>
   </nav>
 
   <main>
-    <section class="max-w-6xl mx-auto px-6 pt-14 pb-20 grid lg:grid-cols-[1.05fr_0.95fr] gap-12 items-center">
+    <!-- HERO -->
+    <section class="max-w-6xl mx-auto px-6 pt-20 pb-24 grid lg:grid-cols-[1.1fr_0.9fr] gap-12 items-center">
       <div>
-        <p class="text-sm font-bold text-coral uppercase tracking-wider mb-4">Small studio. Soft technology.</p>
-        <h1 class="text-5xl md:text-7xl font-semibold leading-tight mb-6">
-          Gentle apps for calmer family days.
+        <p class="mm-caption mb-5">Small studio · Soft technology</p>
+        <h1 class="text-5xl md:text-7xl font-semibold leading-[1.05] mb-6" style="color: var(--mm-ink-900);">
+          Gentle apps for<br/>calmer family days.
         </h1>
-        <p class="text-lg md:text-xl text-ink-secondary leading-relaxed max-w-2xl mb-8">
-          MangoMelon Studio builds playful, privacy-conscious software for routines,
-          stress relief, and small moments of joy.
+        <p class="text-lg md:text-xl leading-relaxed max-w-2xl mb-8" style="color: var(--mm-ink-800);">
+          MangoMelon Studio is an independent studio building playful, privacy-conscious
+          software for routines, stress relief, and small moments of joy.
         </p>
         <div class="flex flex-wrap gap-3">
-          <a href="bumochi/" class="inline-flex items-center bg-ink-primary text-white px-6 py-4 rounded-xl font-bold soft-hover">
-            Explore Bumochi
-          </a>
-          <a href="#products" class="inline-flex items-center bg-white text-ink-primary px-6 py-4 rounded-xl font-bold border border-ink-primary/10 soft-hover">
-            View products
-          </a>
+          <a href="#products" class="mm-btn-primary">See our products</a>
+          <a href="#about" class="mm-btn-ghost">About the studio</a>
         </div>
       </div>
-      <div class="relative">
-        <div class="bg-white/80 border border-white rounded-[2rem] p-8 shadow-xl">
-          <img src="bumochi-icon.png" alt="Bumochi app icon" class="w-32 h-32 rounded-3xl shadow-md mb-8" />
-          <p class="text-sm font-bold text-coral uppercase tracking-wider mb-3">Launching next</p>
-          <h2 class="text-4xl md:text-5xl font-semibold mb-4">Bumochi</h2>
-          <p class="text-ink-secondary leading-relaxed mb-6">
-            A gentle time-management pet companion that helps kids 6+ complete
-            daily quests, build routines, and take healthy breaks.
-          </p>
-          <a href="bumochi/" class="font-bold text-ink-primary hover:text-coral transition-colors">Learn about Bumochi -></a>
-        </div>
+      <div class="flex justify-center lg:justify-end">
+        <img src="mangomelon-logo.png" alt="MangoMelon Studio mascot" class="w-full max-w-md object-contain drop-shadow-xl" />
       </div>
     </section>
 
-    <section id="products" class="bg-white/45 py-20 backdrop-blur-sm">
-      <div class="max-w-6xl mx-auto px-6">
-        <div class="flex flex-wrap items-end justify-between gap-4 mb-10">
-          <div>
-            <p class="text-sm font-bold text-coral uppercase tracking-wider mb-3">Products</p>
-            <h2 class="text-4xl md:text-5xl font-semibold">A small family of soft apps.</h2>
+    <!-- ABOUT (before Products, per request) -->
+    <section id="about" class="py-24" style="background: rgba(255,255,255,0.55); backdrop-filter: blur(6px); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+      <div class="max-w-4xl mx-auto px-6 text-center">
+        <p class="mm-caption mb-4">About</p>
+        <h2 class="text-4xl md:text-5xl font-semibold mb-6">Independent, parent-minded, and patient.</h2>
+        <p class="text-lg leading-relaxed mb-5" style="color: var(--mm-ink-800);">
+          MangoMelon Studio is a small independent studio building gentle, playful
+          software for families. We care about apps that feel warm, useful, and
+          trustworthy — not apps that push endless engagement.
+        </p>
+        <p class="text-lg leading-relaxed" style="color: var(--mm-ink-800);">
+          Across our products the goal is the same: calm design, clear utility,
+          family-friendly privacy, and a little bit of joy.
+        </p>
+      </div>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section id="products" class="max-w-6xl mx-auto px-6 py-24">
+      <div class="mb-12 text-center">
+        <p class="mm-caption mb-3">Products</p>
+        <h2 class="text-4xl md:text-5xl font-semibold">A small family of soft apps.</h2>
+      </div>
+      <div class="grid md:grid-cols-2 gap-8">
+
+        <!-- Bumochi -->
+        <article class="mm-card p-8">
+          <div class="flex items-center gap-4 mb-6">
+            <img src="bumochi-icon-small.png" alt="Bumochi icon" class="w-16 h-16 rounded-2xl" style="box-shadow: var(--shadow-2);" />
+            <div>
+              <h3 class="text-3xl font-semibold" style="font-family: var(--font-display); color: var(--mm-ink-900);">Bumochi</h3>
+              <p class="text-sm font-semibold mt-1" style="color: var(--mm-mango-600);">Gentle time management for kids 6+</p>
+            </div>
           </div>
-        </div>
-        <div class="grid md:grid-cols-2 gap-8">
-          <article class="bg-white rounded-3xl p-8 shadow-sm soft-hover">
-            <div class="flex items-center gap-4 mb-6">
-              <img src="bumochi-icon-small.png" alt="" class="w-14 h-14 rounded-2xl" />
-              <div>
-                <h3 class="text-3xl font-semibold">Bumochi</h3>
-                <p class="text-ink-secondary font-bold">Gentle time management for kids 6+</p>
-              </div>
-            </div>
-            <p class="text-ink-secondary leading-relaxed mb-6">
-              Daily quests, a bunny companion, parent-friendly progress review,
-              healthy breaks, and local-first privacy.
-            </p>
-            <a href="bumochi/" class="inline-flex bg-ink-primary text-white px-5 py-3 rounded-xl font-bold">Open product page</a>
-          </article>
+          <p class="leading-relaxed mb-6" style="color: var(--mm-ink-800);">
+            A bunny pet companion that helps kids build daily routines through quests,
+            healthy breaks, and a weekly review parents can actually use. Local-first,
+            no ads, no engagement traps. The name is a Chinese pun — <em>不磨叽</em>, "no dawdling."
+          </p>
+          <div class="flex flex-wrap gap-3">
+            <a href="bumochi/index.html" class="mm-btn-primary" style="background: var(--mm-mango-600);">Visit product page</a>
+            <a href="bumochi/privacy/index.html" class="mm-link self-center">Privacy →</a>
+          </div>
+        </article>
 
-          <article class="bg-white rounded-3xl p-8 shadow-sm soft-hover">
-            <div class="flex items-center gap-4 mb-6">
-              <div class="w-14 h-14 rounded-2xl bg-cream flex items-center justify-center text-3xl">🐤</div>
-              <div>
-                <h3 class="text-3xl font-semibold">SquishyDuck</h3>
-                <p class="text-ink-secondary font-bold">Soft stress relief for quick calming moments</p>
-              </div>
+        <!-- SquishyDuck -->
+        <article class="mm-card p-8">
+          <div class="flex items-center gap-4 mb-6">
+            <img src="squishyduck-icon.png" alt="SquishyDuck icon" class="w-16 h-16 rounded-2xl" style="box-shadow: var(--shadow-2);" />
+            <div>
+              <h3 class="text-3xl font-semibold" style="font-family: var(--font-display); color: var(--mm-ink-900);">SquishyDuck</h3>
+              <p class="text-sm font-semibold mt-1" style="color: var(--mm-blossom-600);">Soft stress relief, one duck at a time</p>
             </div>
-            <p class="text-ink-secondary leading-relaxed mb-6">
-              SquishyDuck started MangoMelon's product journey with playful,
-              tactile interactions designed to make the day feel lighter.
-            </p>
-            <a href="mailto:support@mangomelon.studio?subject=SquishyDuck" class="inline-flex bg-white text-ink-primary px-5 py-3 rounded-xl font-bold border border-ink-primary/10">Contact for details</a>
-          </article>
-        </div>
+          </div>
+          <p class="leading-relaxed mb-6" style="color: var(--mm-ink-800);">
+            Squeeze, breathe, and unwind with a little duck companion. SquishyDuck started
+            the studio's product journey — tactile, playful interactions designed to make
+            quick calming moments feel lighter.
+          </p>
+          <div class="flex flex-wrap gap-3 items-center">
+            <a href="squishyduck/index.html" class="mm-btn-primary" style="background: var(--mm-blossom-600);">Visit product page</a>
+            <a href="https://apps.apple.com/us/app/squishy-duck/id6751784205" target="_blank" rel="noopener" class="mm-link self-center">App Store ↗</a>
+            <a href="squishyduck/privacy/index.html" class="mm-link self-center">Privacy →</a>
+          </div>
+        </article>
       </div>
-    </section>
-
-    <section id="about" class="max-w-4xl mx-auto px-6 py-20 text-center">
-      <p class="text-sm font-bold text-coral uppercase tracking-wider mb-4">About</p>
-      <h2 class="text-4xl md:text-5xl font-semibold mb-6">Independent, parent-minded, and patient.</h2>
-      <p class="text-lg text-ink-secondary leading-relaxed mb-4">
-        MangoMelon Studio is a small independent studio building gentle, playful
-        software for families. We care about apps that feel warm, useful, and
-        trustworthy, not apps that push endless engagement.
-      </p>
-      <p class="text-lg text-ink-secondary leading-relaxed">
-        Across our products, the goal is the same: calm design, clear utility,
-        family-friendly privacy, and a little bit of joy.
-      </p>
     </section>
   </main>
 
-  <footer class="border-t border-ink-primary/10">
-    <div class="max-w-6xl mx-auto px-6 py-10 flex flex-wrap justify-between items-center gap-4 text-sm text-ink-secondary">
-      <div>
-        <p class="font-bold text-ink-primary mb-1">MangoMelon Studio LLC</p>
-        <p>Gentle family software. Built with care.</p>
+  <footer style="border-top: 1px solid var(--border);">
+    <div class="max-w-6xl mx-auto px-6 py-10 flex flex-wrap justify-between items-center gap-4 text-sm" style="color: var(--mm-ink-800);">
+      <div class="flex items-center gap-3">
+        <img src="mangomelon-logo.png" alt="" class="w-8 h-8 object-contain" />
+        <div>
+          <p class="font-bold" style="color: var(--mm-ink-900);">MangoMelon Studio LLC</p>
+          <p>Gentle family software. Built with care.</p>
+        </div>
       </div>
-      <div class="flex flex-wrap gap-5 font-bold">
-        <a href="bumochi/" class="hover:text-coral transition-colors">Bumochi</a>
-        <a href="bumochi/privacy/" class="hover:text-coral transition-colors">Privacy</a>
-        <a href="mailto:support@mangomelon.studio" class="hover:text-coral transition-colors">support@mangomelon.studio</a>
+      <div class="flex flex-wrap gap-5 font-semibold">
+        <a href="bumochi/index.html" class="mm-link">Bumochi</a>
+        <a href="bumochi/privacy/index.html" class="mm-link">Privacy</a>
+        <a href="mailto:hello@mangomelon.studio" class="mm-link">hello@mangomelon.studio</a>
       </div>
     </div>
   </footer>
